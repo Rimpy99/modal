@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 //REACT ROUTER
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 //COMPONENTS IMPORTS
 import MainPage from './components/MainPage/MainPage';
