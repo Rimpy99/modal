@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Modal } from '@mui/material';
+import { Button, Dialog, DialogContent, DialogContentText, DialogActions } from '@mui/material';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -21,17 +21,23 @@ const MainPage = () => {
     return(
         <Container>
             <Button variant='contained' color="primary" onClick={() => setOpen(true)}>Open Modal</Button>
-            <Modal
+            <Dialog
                 open={open}
                 onClose={() => setOpen(false)}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box>
-                    Click to accept leaving the page.
-                    <Link to="/newPage">Open new page</Link>
-                </Box>
-            </Modal>
+                <DialogContent>
+                    <DialogContentText>
+                        Click to accept leaving the page.
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Link to="/newPage">
+                        <Button>Open new page</Button>
+                    </Link>
+                </DialogActions>
+            </Dialog>
         </Container>
     )
 };
