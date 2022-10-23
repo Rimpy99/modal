@@ -5,8 +5,8 @@ import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 //COMPONENTS IMPORTS
-import MainPage from './components/MainPage';
-import NextPage from './components/NextPage';
+import MainPage from './components/MainPage/MainPage';
+import NextPage from './components/NextPage/NextPage';
 
 function App() {
   return (
