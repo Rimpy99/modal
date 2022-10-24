@@ -20,7 +20,7 @@ const MainPage = () => {
 
     return(
         <Container>
-            <Button variant='contained' color="primary" onClick={() => setOpen(true)}>Open Modal</Button>
+            <Button variant='contained' color="primary" onClick={() => setOpen(true)}>Open new page</Button>
             <Dialog
                 open={open}
                 onClose={() => setOpen(false)}
@@ -29,10 +29,11 @@ const MainPage = () => {
             >
                 <DialogContent>
                     <DialogContentText>
-                        Click to accept leaving the page.
+                        Are you sure you want to leave this page?
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
+                    <Button onClick={() => setOpen(false)}>Cancel</Button>
                     <Link to="/newPage">
                         <Button>Open new page</Button>
                     </Link>
