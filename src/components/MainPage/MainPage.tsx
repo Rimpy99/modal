@@ -9,18 +9,18 @@ const Container = styled.div`
     padding: 50px;
 `;
 
-const Box = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
+// const Box = styled.div`
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// `
 
 const MainPage = () => {
     const [open, setOpen] = useState<boolean>(false);
 
     return(
         <Container>
-            <Button variant='contained' color="primary" onClick={() => setOpen(true)}>Open new page</Button>
+            <Button variant='contained' color="primary" onClick={() => setOpen(true)}>Open next page</Button>
             <Dialog
                 open={open}
                 onClose={() => setOpen(false)}
@@ -34,8 +34,8 @@ const MainPage = () => {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={() => setOpen(false)}>Cancel</Button>
-                    <Link to="/newPage">
-                        <Button>Open new page</Button>
+                    <Link to="/nextPage">
+                        <Button>Open next page</Button>
                     </Link>
                 </DialogActions>
             </Dialog>
